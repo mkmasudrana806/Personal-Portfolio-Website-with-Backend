@@ -74,7 +74,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="relative w-full py-16 md:py-24">
+    <section id="projects" className="relative w-full mt-16 md:mt-20">
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="space-y-4 mb-8">

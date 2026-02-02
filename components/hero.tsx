@@ -6,7 +6,7 @@ import AnimatedCode from "./animatedCode";
 
 const Hero = () => {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section id="hero" className="relative w-full overflow-hidden">
       {/* Gradient background accent */}
       <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full bg-accent/5 blur-3xl"></div>
       <div className="absolute -left-32 bottom-0 h-64 w-64 rounded-full bg-accent/5 blur-3xl"></div>
@@ -15,9 +15,17 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left column - Content */}
           <div className="space-y-8">
+            
             {/* Badge */}
             <div className="inline-flex items-center mt-4 rounded-full border border-border/50 bg-secondary/30 px-4 py-1.5">
-              <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span>
+              {/* Animated Dot Container */}
+              <span className="relative flex h-2 w-2 mr-2">
+                {/* The Ping Ring */}
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                {/* The Solid Center */}
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+
               <p className="text-sm text-foreground/70 font-medium">
                 Open to opportunities
               </p>
