@@ -29,7 +29,7 @@ const experiences = [
   {
     title: "Travel Tips & Destination Guides",
     organization: "Personal Project",
-    period: "Nov 2025 — Jan 2026",
+    period: "Sep 2024 —  Oct 2024",
     description:
       "A practical social blogging platform designed for travel enthusiasts to share itineraries, tips, and destination guides.",
     highlights: [
@@ -116,10 +116,16 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experiences" className="relative z-10 py-24 px-6">
-      <div className="container relative z-10 mx-auto px-4 md:px-6 ">
+    <section id="experiences" className="relative z-10 px-4 mt-16">
+      <div className="container relative z-10 mx-auto md:px-6 ">
         {/* Header */}
-        <div className="mb-16">
+        <div className="inline-flex items-center rounded-full border border-border/50 bg-secondary/30 px-4 py-1.5">
+          <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span>
+          <p className="text-sm text-foreground/70 font-medium">
+            Strategic Growth
+          </p>
+        </div>
+        <div className="mb-16 mt-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
             Hands-on{" "}
             <span className="bg-linear-to-r from-accent to-accent/60 bg-clip-text text-transparent">
@@ -135,27 +141,29 @@ const Experience = () => {
         </div>
 
         {/* Timeline Layout */}
-        <div className="space-y-12 relative before:absolute before:inset-0 before:left-8 before:w-px before:bg-white/5">
+        {/* Added 'md:before' to show the line only on medium screens and up */}
+        <div className="space-y-12 relative md:before:absolute md:before:inset-0 md:before:left-8 md:before:w-px md:before:bg-white/5">
           {experiences.map((exp, idx) => (
-            <div key={idx} className="relative pl-20 group">
-              {/* Icon / Marker */}
+            /* Changed pl-20 to pl-0 for small screens, md:pl-20 for larger */
+            <div key={idx} className="relative pl-0 md:pl-20 group">
+              {/* Icon / Marker: Added 'hidden md:flex' to hide on mobile */}
               <div
-                className={`absolute left-0 top-0 w-16 h-16 rounded-2xl bg-[#0d1117] border border-white/10 flex items-center justify-center transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-[0_0_20px_rgba(var(--accent),0.1)] ${exp.color}`}
+                className={`hidden md:flex absolute left-0 top-0 w-16 h-16 rounded-2xl bg-[#0d1117] border border-white/10 items-center justify-center transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-[0_0_20px_rgba(var(--accent),0.1)] ${exp.color}`}
               >
                 {exp.icon}
               </div>
 
               {/* Content Card */}
-              <div className="  backdrop-blur-xl border border-white/5 p-8 rounded-2xl transition-all duration-300  ">
+              <div className="backdrop-blur-xl border border-white/5 p-4 md:p-8 lg:p-8 rounded-2xl transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-foreground">
                       {exp.title}
-                    </h4>{" "}
+                    </h4>
                     <div className="flex gap-x-2 items-center">
                       <p className="text-accent text-sm font-medium">
                         {exp.organization}
-                      </p>{" "}
+                      </p>
                       {exp.experienceType && (
                         <span className="inline-block px-2.5 py-1 rounded-full text-xs font-semibold bg-accent/10 text-accent border border-accent/30">
                           {exp.experienceType}
@@ -197,7 +205,7 @@ const Experience = () => {
                   {exp.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-foreground/80 border  border-accent/40 group-hover:bg-accent/5 transition-all"
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-foreground/80 border border-accent/40 group-hover:bg-accent/5 transition-all"
                     >
                       {tech}
                     </span>

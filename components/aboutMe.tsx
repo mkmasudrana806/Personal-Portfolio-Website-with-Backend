@@ -2,8 +2,8 @@ import { GraduationCap, MapPin } from "lucide-react";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="relative  z-10 mt-16  px-6 overflow-hidden ">
-      <div className="mx-auto px-4 md:px-6">
+    <section id="about" className="relative  z-10 mt-16  px-4 overflow-hidden ">
+      <div className="mx-auto  md:px-6">
         {/* Section Header */}
         <div className="mb-12">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -32,7 +32,7 @@ const AboutMe = () => {
 
           {/* RIGHT SIDE: Content & Stats */}
           <div className="w-full lg:w-2/3 space-y-8">
-            <div className="bg-white/3 backdrop-blur-xl border border-white/10 p-8 rounded-2xl relative overflow-hidden">
+            <div className="bg-white/3 backdrop-blur-xl border border-white/10 p-4 md:p-6 lg:p-8 rounded-2xl relative overflow-hidden">
               {/* Subtle background glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 blur-[80px]" />
 
@@ -49,8 +49,9 @@ const AboutMe = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
                 <p className="text-foreground/80 leading-relaxed">
                   My journey combines academic rigor with hands-on professional
-                  experience, focusing on modern backend technologies, database{" "}
-                  <span className="text-accent">optimization</span>,{" "}
+                  experience, focusing on modern{" "}
+                  <span className="text-accent">backend</span> technologies,
+                  database <span className="text-accent">optimization</span>,{" "}
                   <span className="text-accent">security</span> and{" "}
                   <span className="text-accent">system architectue</span>. I'm
                   driven by the challenge of solving{" "}

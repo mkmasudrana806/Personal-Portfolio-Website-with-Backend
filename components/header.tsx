@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-accent-foreground font-bold">
             M
           </div>
-          <span className="font-semibold text-foreground">Masud Rana</span>
+          <span className="font-semibold text-lg md:text-2xl text-foreground">Masud Rana</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -32,7 +32,7 @@ const Header = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-accent"
+              className="px-4 py-2 text-sm font-sm text-foreground/70 transition-colors hover:text-accent"
             >
               {item.label}
             </Link>

@@ -84,13 +84,20 @@ const Projects = () => {
               Featured Work
             </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
-            Projects That{" "}
-            <span className="bg-linear-to-r from-accent to-accent/60 bg-clip-text text-transparent">
-              Stand Out
-            </span>
-            <div className="h-1 w-40 bg-accent mt-4 rounded-full opacity-50"></div>
-          </h2>
+          <div className="flex justify-between items-center">
+            {" "}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
+              Projects That{" "}
+              <span className="bg-linear-to-r from-accent to-accent/60 bg-clip-text text-transparent">
+                Stand Out
+              </span>
+              <div className="h-1 w-40 bg-accent mt-4 rounded-full opacity-50"></div>
+            </h2>
+            <button className="md:inline-flex hidden   items-center justify-center px-4 py-1.5 rounded-lg border border-white/20 bg-white/5 text-foreground font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 active:scale-95 cursor-pointer">
+              <ArrowRight className="mr-2 h-4 w-4 text-blue-400" />
+              View More Projects
+            </button>
+          </div>
         </div>
 
         {/* Projects Grid */}
@@ -111,7 +118,7 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-3 space-y-4">
+              <div className="p-4 md:p-6 lg:p-8 space-y-4">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-3 ">
                     <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
@@ -175,13 +182,10 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* View All CTA */}
-        <div className="flex justify-center mt-8">
-          <button className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg border border-white/20 bg-white/5 text-foreground font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 active:scale-95 cursor-pointer">
-            View All Projects
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
+        <button className="inline-flex  md:hidden mt-6 items-center justify-center px-4 py-1.5 rounded-lg border border-white/20 bg-white/5 text-foreground font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/40 active:scale-95 cursor-pointer">
+          <ArrowRight className="mr-2 h-4 w-4 text-blue-400" />
+          View More Projects
+        </button>
       </div>
     </section>
   );
