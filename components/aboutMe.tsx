@@ -15,7 +15,7 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-start">
           {/* LEFT SIDE: Professional Image Frame */}
           <div className="relative group w-full max-w-[320px]  lg:max-w-none lg:w-1/3">
-            <div className="relative z-10 overflow-hidden rounded-2xl aspect-[4/5] border border-white/10 hover:grayscale-0 transition-all duration-500 shadow-2xl">
+            <div className="relative z-10 overflow-hidden rounded-2xl aspect-4/5 border border-white/10 hover:grayscale-0 transition-all duration-500 shadow-2xl">
               <img
                 src="/masud rana profile picture.webp"
                 alt="Masud Rana"
@@ -32,7 +32,7 @@ const AboutMe = () => {
 
           {/* RIGHT SIDE: Content & Stats */}
           <div className="w-full lg:w-2/3 space-y-8">
-            <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 p-8 rounded-2xl relative overflow-hidden">
+            <div className="bg-white/3 backdrop-blur-xl border border-white/10 p-8 rounded-2xl relative overflow-hidden">
               {/* Subtle background glow */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 blur-[80px]" />
 
