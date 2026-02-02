@@ -6,7 +6,7 @@ const AboutMe = () => {
       <div className="mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="mb-12">
-          <h3 className="text-4xl font-bold text-foreground">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             About <span className="text-accent">Me</span>
           </h3>
           <div className="h-1 w-20 bg-accent mt-4 rounded-full opacity-50"></div>

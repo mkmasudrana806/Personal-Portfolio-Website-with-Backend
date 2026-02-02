@@ -84,11 +84,12 @@ const Projects = () => {
               Featured Work
             </p>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
             Projects That{" "}
             <span className="bg-linear-to-r from-accent to-accent/60 bg-clip-text text-transparent">
               Stand Out
             </span>
+            <div className="h-1 w-40 bg-accent mt-4 rounded-full opacity-50"></div>
           </h2>
         </div>
 
