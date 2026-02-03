@@ -14,20 +14,27 @@ const projectOneResponsibilities = [
     with role-based access control
   </>,
   <>
-    Built{" "}
-    <span className="text-accent font-medium">background job workers</span>{" "}
-    using BullMQ for scraping and processing
-  </>,
-  <>
-    Designed scalable data schemas in{" "}
-    <span className="text-accent font-medium">MongoDB</span>
-  </>,
-  <>
     Centralized{" "}
     <span className="text-accent font-medium">
       validation and error handling
     </span>{" "}
     at API boundaries
+  </>,
+  <>
+    Implemented a{" "}
+    <span className="text-accent font-medium">Global Rate Limiter</span> using
+    Bottleneck and Redis to manage external AI API quotas across multiple
+    workers.
+  </>,
+  <>
+    Integrated <span className="text-accent font-medium">Zod schemas</span> with
+    LLM outputs to ensure strictly typed JSON responses
+  </>,
+  <>
+    Implemented Distributed{" "}
+    <span className="text-accent font-medium"> background Job Processing</span>{" "}
+    by configuring BullMQ with custom backoff strategies and lock durations for
+    long-running AI tasks.
   </>,
 ];
 
@@ -41,6 +48,7 @@ const projectOneTech = [
   "Redis",
   "LLM APIs",
   "BullMQ",
+  "Bottleneck",
 ];
 
 const projectOneLinks = {
