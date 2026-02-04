@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
     siteName: "Masud Rana Portfolio",
     images: {
-      url: "/masud-rana-profile-picture.webp",
+      url: `${siteUrl}/masud-rana-profile.webp`,
       width: 1200,
       height: 630,
       alt: "Masud Rana Portfolio Preview",

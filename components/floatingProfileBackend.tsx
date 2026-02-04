@@ -36,8 +36,9 @@ const FloatingProfileBackend = () => {
             className="bg-white rounded-full p-0.25"
           >
             <Image
-              width={100}
-              height={100}
+              width={465}
+              height={465}
+              priority
               src="/Md_Masud_Rana-logo.webp"
               alt="Masud Rana"
               className="w-8 h-8 rounded-full object-cover"
@@ -73,8 +74,8 @@ const FloatingProfileBackend = () => {
             <div className="relative flex justify-center -mt-12 mb-4">
               <div className="p-1 rounded-full bg-card border border-border shadow-sm">
                 <Image
-                  width={100}
-                  height={100}
+                  width={465}
+                  height={465}
                   src="/masud-rana-profile-picture.webp"
                   alt="Masud Rana"
                   className="h-24 w-24 rounded-full object-cover border-2 border-background shadow-inner"

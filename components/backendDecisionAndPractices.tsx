@@ -169,11 +169,11 @@ const EngineeringDecisionBackend = () => {
 
           <figure className="order-1 md:order-2 rounded-2xl border border-border/50 bg-card/40">
             <Image
-              className="w-full"
               src="/asynchronous-and-synchronous-diagram.webp"
               alt="Asynchronous and Synchronous diagram"
-              width={100}
-              height={100}
+              width={659}
+              height={461}
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <figcaption className="text-center mt-2 text-foreground/70">
               Fig. 2: Asynchronous and Synchronous APIs flow example.
@@ -205,10 +205,10 @@ const EngineeringDecisionBackend = () => {
           {/* Diagram */}
           <figure className="order-1 md:order-2 rounded-2xl border border-border/50 bg-card/40">
             <Image
-              className="w-full"
               src="/input-validation-diagram.webp"
-              width={100}
-              height={100}
+              width={713}
+              height={415}
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Example of input data validation in server"
             />
             <figcaption className="text-center mt-2 text-foreground/70">

@@ -170,9 +170,9 @@ const ProjectsBackend = () => {
                     {/* Architecture Visual */}
                     <figure>
                       <Image
-                        className="w-full"
-                        width={100}
-                        height={100}
+                        width={1250}
+                        height={815}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         src={project.image}
                         alt="AI powered job recruiting system with background job."
                       />

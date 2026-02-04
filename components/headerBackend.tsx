@@ -23,8 +23,9 @@ const HeaderBackend = () => {
           <div className="p-0.5 rounded-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
             <div className="bg-white rounded-full p-0.25">
               <Image
-                width={100}
-                height={100}
+                width={465}
+                height={465}
+                priority
                 src="/Md_Masud_Rana-logo.webp"
                 alt="Masud Rana"
                 className="w-8 h-8 rounded-full object-cover"
