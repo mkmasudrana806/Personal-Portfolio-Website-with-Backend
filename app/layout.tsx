@@ -8,8 +8,6 @@ import "./globals.css";
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
-const siteUrl = "https://masudranasheikh.me";
-
 export const metadata: Metadata = {
   title: "Masud Rana | Backend Engineer • Node.js",
   description:
@@ -21,12 +19,9 @@ export const metadata: Metadata = {
       "Building scalable, production-ready APIs with Node.js, TypeScript & BullMQ. Focused on system design, security, and reliable backend architecture.",
     siteName: "Masud Rana Portfolio",
     images: {
-      url: `${siteUrl}/masud-rana-profile.webp`,
-      width: 1200,
-      height: 630,
-      alt: "Masud Rana Portfolio Preview",
+      url: "/masud rana profile picture.webp",
     },
-    url: `${siteUrl}/masud-rana-profile.webp`,
+    url: "https://masudranasheikh.me",
     locale: "en_US",
     type: "website",
   },
