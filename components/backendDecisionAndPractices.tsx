@@ -114,7 +114,7 @@ const performanceAndQuality = [
 
 const EngineeringDecisionBackend = () => {
   return (
-    <section className="relative w-full mt-16 md:mt-20">
+    <section id="experiences" className="relative w-full mt-16 md:mt-20">
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="space-y-4 mb-8">
@@ -166,7 +166,7 @@ const EngineeringDecisionBackend = () => {
           </div>
 
           <figure className="order-1 md:order-2 rounded-2xl border border-border/50 bg-card/40">
-            <img
+            <img className="w-full"
               src="/asynchronous and synchronous diagram.webp"
               alt="Asynchronous and Synchronous diagram"
             />

@@ -19,8 +19,14 @@ const Footer = () => {
           {/* Brand & Identity */}
           <div className="col-span-4 sm:col-span-4 md:col-span-2 space-y-4">
             <div className="flex items-center gap-2 group">
-              <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                <Cpu className="w-5 h-5 text-accent" />
+              <div className="p-0.5 rounded-full bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+                <div className="bg-white rounded-full p-0.5">
+                  <img
+                    src="/Md_Masud_Rana-logo.webp"
+                    alt="Masud Rana"
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
+                </div>
               </div>
               <span className="text-xl font-bold tracking-tighter">
                 Masud Rana

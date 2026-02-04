@@ -1,4 +1,4 @@
-import Header from "@/components/header";
+import HeaderBackend from "@/components/headerBackend";
 import HeroBackend from "@/components/heroBackend";
 import Footer from "@/components/footer";
 import SkillsBackend from "@/components/skillsBackend";
@@ -8,7 +8,7 @@ import EngineeringDecisionBackend from "@/components/backendDecisionAndPractices
 export default function Home() {
   return (
     <div className="w-full">
-      <Header />
+      <HeaderBackend />
       <HeroBackend />
       <SkillsBackend />
       <ProjectsBackend />
