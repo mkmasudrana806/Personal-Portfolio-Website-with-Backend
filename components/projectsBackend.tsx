@@ -123,7 +123,7 @@ const ProjectsBackend = () => {
                     <h4 className="text-lg font-medium text-foreground mb-4">
                       Backend Responsibilities
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 md:space-y-4">
                       {project.responsibilities.map((responsiblity, i) => (
                         <li
                           key={i}
@@ -173,7 +173,7 @@ const ProjectsBackend = () => {
                         alt="AI powered job recruiting system with background job."
                       />
                       <figcaption className="mt-2  text-center">
-                        Fig: A high level workflow diagram of embedding when a
+                        Fig. 1: A high level workflow diagram of embedding when a
                         new job is posted in our AI-powered recruiting platform.
                       </figcaption>
                     </figure>

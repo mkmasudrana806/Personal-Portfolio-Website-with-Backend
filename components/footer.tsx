@@ -13,11 +13,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 pt-15  pb-4 px-6 ">
-      <div className="container relative z-10 mx-auto   md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <footer className="relative z-10 pt-15  pb-4 ">
+      <div className="container relative z-10 mx-auto  px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-12 mb-8">
           {/* Brand & Identity */}
-          <div className="space-y-4">
+          <div className="col-span-4 sm:col-span-4 md:col-span-2 space-y-4">
             <div className="flex items-center gap-2 group">
               <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
                 <Cpu className="w-5 h-5 text-accent" />
@@ -26,14 +26,15 @@ const Footer = () => {
                 Masud Rana
               </span>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
-              Computer Science student focused on building scalable backend
-              architectures and optimizing machine learning model for research.
+            <p className="leading-relaxed">
+              A Computer Science and Engineering student focused on building
+              scalable, maintainable and secure backend system using nodejs and
+              optimizing database query performance.
             </p>
           </div>
 
           {/* Quick Contact */}
-          <div className="md:col-span-1">
+          <div className="col-span-4 sm:col-span-2 md:col-span-1">
             <h4 className="text-sm md:text-lg font-bold uppercase tracking-widest text-foreground">
               Contact
             </h4>
@@ -52,9 +53,9 @@ const Footer = () => {
           </div>
 
           {/* Socials & Contact */}
-          <div className="space-y-4">
+          <div className="col-span-4 sm:col-span-2 md:col-span-1 space-y-4">
             <h4 className="text-sm md:text-lg font-bold  uppercase tracking-widest text-foreground">
-              Connect
+              Find me on
             </h4>
             <div className="flex gap-4">
               {[
