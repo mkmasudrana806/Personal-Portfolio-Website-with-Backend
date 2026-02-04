@@ -10,7 +10,7 @@ const codeExamples = [
     language: "javascript",
     code: `const express = require('express');
 const app = express();
-
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 app.post('/api/users', (req, res) => {
@@ -22,8 +22,8 @@ app.post('/api/users', (req, res) => {
   });
 });
 
-app.listen(6000, () => {
-  console.log('Server running on port');
+app.listen(PORT, () => {
+  console.log('Server running on port: ', PORTs);
 });`,
   },
   {

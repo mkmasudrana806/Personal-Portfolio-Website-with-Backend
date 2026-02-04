@@ -3,7 +3,7 @@ import { GraduationCap, MapPin } from "lucide-react";
 const AboutMeBackend = () => {
   return (
     <section id="about" className="relative  z-10 mt-16  px-4 overflow-hidden ">
-      <div className="mx-auto  md:px-6">
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
         {/* Section Header */}
         <div className="mb-12">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -37,43 +37,46 @@ const AboutMeBackend = () => {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 blur-[80px]" />
 
               <p className="text-xl text-foreground font-medium mb-4">
-                Hi! I am <span className="text-accent">Masud Rana</span>, a{" "}
-                <span className="text-accent font-semibold">CSE</span> student
-                and passionate{" "}
+                Hi, I’m <span className="text-accent">Masud Rana</span>, a{" "}
                 <span className="text-accent font-semibold">
-                  backend engineer
+                  Computer Science
                 </span>{" "}
-                dedicated to building modular, secure, and scalable systems.
+                student with{" "}
+                <span className="text-accent font-semibold">2+ years</span> of
+                hands-on backend engineering experience, focused on building
+                reliable, secure, and scalable backend systems.
               </p>
 
               <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
                 <p className="text-foreground/80 leading-relaxed">
-                  My journey combines academic rigor with hands-on professional
-                  experience, focusing on modern{" "}
-                  <span className="text-accent">backend</span> technologies,
-                  database <span className="text-accent">optimization</span>,{" "}
-                  <span className="text-accent">security</span> and{" "}
-                  <span className="text-accent">system architectue</span>. I'm
-                  driven by the challenge of solving{" "}
-                  <span className="text-accent">complex problems</span>. My
-                  current major project is an{" "}
-                  <span className="text-accent">AI-Powered Recruiting</span>{" "}
-                  Platform utilizing <span className="text-accent">LLM</span> as
-                  reasoning model. Beyound backend, also i have hands-on 1.5+
-                  years of{" "}
-                  <span className="text-accent">frontend development</span>{" "}
-                  experience with React.js, Next.js, tailwind css, and Redux.
+                  My academic journey in Computer Science built a strong
+                  foundation in{" "}
+                  <span className="text-accent">data structures</span>,{" "}
+                  <span className="text-accent">algorithms</span>,{" "}
+                  <span className="text-accent">DBMS</span>,{" "}
+                  <span className="text-accent">OOPs</span>,{" "}
+                  <span className="text-accent">Software Engineering</span>,{" "}
+                  <span className="text-accent">operating systems</span>, and{" "}
+                  <span className="text-accent">computer networks</span>. These
+                  fundamentals directly shape how I approach backend engineering
+                  — reasoning about data flow, performance, consistency, and
+                  system boundaries instead of just writing code.
                 </p>
 
                 <p className="text-foreground/80 leading-relaxed">
-                  Beyond development, I am deeply involved in learning{" "}
-                  <span className="text-accent">system design</span>,{" "}
-                  <span className="text-accent">cloud services </span> like AWS.
-                  I am also continously research on{" "}
-                  <span className="text-accent"> machine learning</span> and{" "}
-                  <span className="text-accent">deep learning</span> like
-                  classification, object detection, recognition and Explainable
-                  AI (XAI) for academic journals.
+                  I approach backend development with a systems
+                  mindset—prioritizing{" "}
+                  <span className="text-accent">clear API contracts</span>,{" "}
+                  <span className="text-accent">data integrity</span>,{" "}
+                  <span className="text-accent">
+                    authentication & authorization
+                  </span>
+                  , and{" "}
+                  <span className="text-accent">fault-tolerant design</span>. I
+                  enjoy working close to business logic and databases, designing
+                  services that are predictable,{" "}
+                  <span className="text-accent">maintainable</span>, and safe to
+                  operate in production.
                 </p>
               </div>
 
@@ -91,7 +94,7 @@ const AboutMeBackend = () => {
             {/* Key Highlights */}
             <div className="grid grid-cols-3 gap-4 place-items-center border-t border-border/50">
               <div className="space-y-2">
-                <p className="text-2xl font-bold text-accent">30+</p>
+                <p className="text-2xl font-bold text-accent">6+</p>
                 <p className="text-sm text-foreground/60">Projects Built</p>
               </div>
               <div className="space-y-2">

@@ -48,9 +48,9 @@ const HeaderBackend = () => {
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:inline-flex px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium transition-opacity hover:opacity-90">
+          <Link href={"#footer"} className="hidden md:inline-flex px-5 py-2 rounded-md bg-accent text-accent-foreground text-sm font-medium transition-opacity hover:opacity-90">
             Get in Touch
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
