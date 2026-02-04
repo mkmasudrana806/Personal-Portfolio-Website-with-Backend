@@ -1,61 +1,82 @@
 import { ArrowRight, Brain, Compass, ExternalLink, Github } from "lucide-react";
-import React from "react";
+import React, { ReactElement } from "react";
 
-// project 1 responsibilities array with highlighted colors
-const projectOneResponsibilities = [
-  ,
-  <>
-    Designed <span className="text-accent font-medium">RESTful APIs</span> for
-    job ingestion, filtering, and retrieval
-  </>,
-  <>
-    Implemented{" "}
-    <span className="text-accent font-medium">JWT-based authentication</span>{" "}
-    with role-based access control
-  </>,
-  <>
-    Centralized{" "}
-    <span className="text-accent font-medium">
-      validation and error handling
-    </span>{" "}
-    at API boundaries
-  </>,
-  <>
-    Implemented a{" "}
-    <span className="text-accent font-medium">Global Rate Limiter</span> using
-    Bottleneck and Redis to manage external AI API quotas across multiple
-    workers.
-  </>,
-  <>
-    Integrated <span className="text-accent font-medium">Zod schemas</span> with
-    LLM outputs to ensure strictly typed JSON responses
-  </>,
-  <>
-    Implemented Distributed{" "}
-    <span className="text-accent font-medium"> background Job Processing</span>{" "}
-    by configuring BullMQ with custom backoff strategies and lock durations for
-    long-running AI tasks.
-  </>,
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  responsibilities: React.ReactElement[];
+  technologies: string[];
+  github?: string;
+  live?: string;
+  type: string;
+}
+
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "AI-Powered Recruiting & Job Searching",
+    description:
+      "AI-Powered  job recruting, job ranking, and job searching platforlm. Architected a high-concurrency backend system using Node.js and TypeScript to automate recruitment workflows through AI-driven intelligence. The platform features a distributed processing engine that performs deep-dive Skills Gap Analysis between candidate resumes and job descriptions to generate structured, context-aware interview guides.",
+    image: "/ai job based job recruiting diagram.webp",
+    responsibilities: [
+      <>
+        Designed <span className="text-accent font-medium">RESTful APIs</span>{" "}
+        for job ingestion, filtering, and retrieval
+      </>,
+      <>
+        Implemented{" "}
+        <span className="text-accent font-medium">
+          JWT-based authentication
+        </span>{" "}
+        with role-based access control
+      </>,
+      <>
+        Centralized{" "}
+        <span className="text-accent font-medium">
+          validation and error handling
+        </span>{" "}
+        at API boundaries
+      </>,
+      <>
+        Implemented a{" "}
+        <span className="text-accent font-medium">Global Rate Limiter</span>{" "}
+        using Bottleneck and Redis to manage external AI API quotas across
+        multiple workers.
+      </>,
+      <>
+        Integrated <span className="text-accent font-medium">Zod schemas</span>{" "}
+        with LLM outputs to ensure strictly typed JSON responses
+      </>,
+      <>
+        Implemented Distributed{" "}
+        <span className="text-accent font-medium">
+          {" "}
+          background Job Processing
+        </span>{" "}
+        by configuring BullMQ with custom backoff strategies and lock durations
+        for long-running AI tasks.
+      </>,
+    ],
+    technologies: [
+      "Expres.js",
+      "TypeScript",
+      "Mongoose",
+      "MongoDB",
+      "JWT",
+      "Zod",
+      "Redis",
+      "LLM APIs",
+      "BullMQ",
+      "Bottleneck",
+    ],
+    github:
+      "https://github.com/mkmasudrana806/AI-Powered-Job-Searching-Platform-Backend",
+    live: "#projects",
+    type: "Backend",
+  },
 ];
-
-const projectOneTech = [
-  "Expres.js",
-  "TypeScript",
-  "Mongoose",
-  "MongoDB",
-  "JWT",
-  "Zod",
-  "Redis",
-  "LLM APIs",
-  "BullMQ",
-  "Bottleneck",
-];
-
-const projectOneLinks = {
-  github:
-    "https://github.com/mkmasudrana806/AI-Powered-Job-Searching-Platform-Backend",
-  live: "#",
-};
 
 const ProjectsBackend = () => {
   return (
@@ -78,82 +99,88 @@ const ProjectsBackend = () => {
             <div className="h-1 w-40 bg-accent mt-4 rounded-full opacity-50"></div>
           </h2>
         </div>
+
         {/* Projects List */}
         <div className="space-y-24">
-          {/* ================= PROJECT 1 ================= */}
-          <article className="relative">
-            {/* Project Header */}
-            <div className="mb-8">
-              <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
-                AI-Powered Job Search Platform
-              </h3>
+          {/* projects card */}
+          {projects.length &&
+            projects.map((project) => (
+              <article key={project.id} className="relative">
+                {/* Project Header */}
+                <div className="mb-8">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
+                    {project.title}
+                  </h3>
 
-              <p className="mt-3 text-foreground/80">
-                A high performing backend system that automates resume-to-job
-                matching, skill gap analysis, and data processing through
-                scalable RESTful APIs and background job pipelines.
-              </p>
-            </div>
-
-            {/* Backend Responsibilities */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-medium text-foreground mb-4">
-                  Backend Responsibilities
-                </h4>
-                <ul className="space-y-2">
-                  {projectOneResponsibilities.map((responsiblity, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-2  text-foreground/70"
-                    >
-                      <ArrowRight className="h-4 w-4 text-accent mt-0.5 shrink-0" />
-                      <span>{responsiblity}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 pt-4">
-                  {projectOneTech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-foreground/80 border border-accent/40 group-hover:bg-accent/5 transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-
-                  {/* github source link and live link  */}
-                  <a
-                    href={projectOneLinks.github}
-                    target="_blank"
-                    className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
-                  >
-                    <Github className="w-4 h-4" /> Source
-                  </a>
-                  <a
-                    target="_blank"
-                    href={projectOneLinks.live}
-                    className="flex items-center gap-2 ps-4 text-xs font-mono text-slate-400 hover:text-white transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" /> Live Demo
-                  </a>
+                  <p className="mt-3 text-foreground/80">
+                    {project.description}
+                  </p>
                 </div>
-              </div>
 
-              {/* Architecture Explanation */}
-              <div className="rounded-xl border border-border/40 bg-secondary/30 ">
-                {/* Architecture Visual */}
-                <figure className="mb-10 rounded-2xl border border-border/50 bg-card/40">
-                  <div className="h-[260px] flex items-center justify-center text-foreground/40 text-sm">
-                    [ Architecture Diagram Placeholder — Client → API → DB →
-                    Queue → Worker ]
+                {/* Backend Responsibilities */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="order-2 md:order-1">
+                    <h4 className="text-lg font-medium text-foreground mb-4">
+                      Backend Responsibilities
+                    </h4>
+                    <ul className="space-y-2">
+                      {project.responsibilities.map((responsiblity, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-2  text-foreground/70"
+                        >
+                          <ArrowRight className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                          <span>{responsiblity}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 pt-4">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-foreground/80 border border-accent/40 group-hover:bg-accent/5 transition-all"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+
+                      {/* github source link and live link  */}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                      >
+                        <Github className="w-4 h-4" /> Source
+                      </a>
+                      <a
+                        target="_blank"
+                        href={project.live}
+                        className="flex items-center gap-2 ps-4 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" /> Live Demo
+                      </a>
+                    </div>
                   </div>
-                </figure>
-              </div>
-            </div>
-          </article>
+
+                  {/* Architecture Explanation */}
+                  <div className="order-1 md:order-2">
+                    {/* Architecture Visual */}
+                    <figure>
+                      <img
+                        src={project.image}
+                        alt="AI powered job recruiting system with background job."
+                      />
+                      <figcaption className="mt-2  text-center">
+                        Fig: A high level workflow diagram of embedding when a
+                        new job is posted in our AI-powered recruiting platform.
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+            ))}
         </div>
       </div>
     </section>
